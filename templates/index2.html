@@ -1,0 +1,45 @@
+<head>
+    <style>
+        .form_container
+{
+  width:450px;
+  height:100px;
+  display:inline-block;
+  margin:20px 20px;
+  padding:10px;
+  
+}
+
+.form_container input[type='text'],
+.form_container button
+{
+  padding:8px;
+  font-size:1.5em;
+}
+
+        </style>
+
+<!-- <script>
+    function handle_form_submission()
+{
+    var x = document.getElementById("name").value;
+    const Http = new XMLHttpRequest();
+    const url='http://188.166.200.41/?tittle='+x;
+    Http.open("GET", url);
+    Http.send();
+
+    Http.onreadystatechange = (e) => {
+    console.log(Http.responseText)
+    }
+  return false; //do not submit the form
+} -->
+</script>
+</head>
+<body>
+<div class="form_container">
+<form id="myform" onsubmit="return handle_form_submission()">
+<input type="text" name='name' id='name' placeholder='Name'/>
+  <button type='submit'>Post it</button>
+</form>
+</div>
+</body>
